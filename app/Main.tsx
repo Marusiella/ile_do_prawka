@@ -6,6 +6,14 @@ import { Label } from "@/components/ui/label";
 
 export default function Main() {
   const [date, setDate] = React.useState<Date>();
+  useEffect(() => {
+      if (window.localStorage) {
+        const d = window.localStorage.getItem("dataUrodzenia");
+        if (d) {
+          setDate(new Date(d));
+        }
+      }
+  },[]);
   const [msg, setMsg] = React.useState<{
     egzaminInfo: string;
     kursInfo: string;
@@ -18,7 +26,7 @@ export default function Main() {
     <div className="flex flex-col items-center space-y-4 text-center">
       <Label htmlFor="calendar">Wybierz datę swoich 18 urodzin:</Label>
       <div id="calendar">
-        <CalendarPicker onSelected={(e) => setDate(e)} />
+        <CalendarPicker onSelected={(e) => setDate(e)} dateFromLs={date} />
       </div>
       {msg.egzaminInfo && (
         <>

@@ -1,4 +1,7 @@
 export function sprawdzPrawoJazdy(dataUrodzenia: Date): { egzaminInfo: string; kursInfo: string; } {
+    if (window.localStorage) {
+        window.localStorage.setItem("dataUrodzenia", dataUrodzenia.toISOString());
+    }
     // Data ukończenia 18 lat
     const data18Urodziny = new Date(dataUrodzenia);
 

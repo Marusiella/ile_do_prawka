@@ -15,11 +15,16 @@ import {
 } from "@/components/ui/popover"
 import { convertDateToPolish } from "./math";
  
-export function CalendarPicker({onSelected}: {onSelected: (date: Date|undefined) => void}) {
-  const [date, setDate] = React.useState<Date>()
+export function CalendarPicker({onSelected, dateFromLs}: {onSelected: (date: Date|undefined) => void, dateFromLs: Date|undefined}) {
+  const [date, setDate] = React.useState<Date>();
   React.useEffect(() => {
     onSelected(date)
   }, [date])
+  React.useEffect(() => {
+    if (dateFromLs) {
+      setDate(dateFromLs)
+    }
+  }, [dateFromLs])
   return (
     <Popover>
       <PopoverTrigger asChild>
