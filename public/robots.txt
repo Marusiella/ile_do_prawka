@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iledoprawka.marektoja.pl
+
+# Sitemaps
+Sitemap: https://iledoprawka.marektoja.pl/sitemap.xml
