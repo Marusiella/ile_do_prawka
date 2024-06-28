@@ -9,7 +9,7 @@ const fontSans = FontSans({
 });
 export const metadata: Metadata = {
   title: "Kiedy mogę zacząć prawko?",
-  description: "Tutaj dowiesz się kiedy możesz zacząć kurs na prawo jazdy.",
+  description: "Tutaj dowiesz się kiedy możesz zacząć kurs na prawo jazdy. Kalkulator oblicza datę twoich 18 urodzin i podaje informacje o egzaminie.",
 };
 
 export default function RootLayout({
