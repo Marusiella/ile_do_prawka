@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics />
+      <script defer src="https://stats.marektoja.pl/script.js" data-website-id="c676d4c1-9d5b-48e3-8d84-e39f968eecd5"></script>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
